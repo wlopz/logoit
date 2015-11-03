@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Company Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Address</th>
+      <th>Website</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @company_infos.each do |company_info| %>
+      <tr>
+        <td><%= company_info.company_name %></td>
+        <td><%= company_info.address %></td>
+        <td><%= company_info.website %></td>
+        <td><%= company_info.user %></td>
+        <td><%= link_to 'Show', company_info %></td>
+        <td><%= link_to 'Edit', edit_company_info_path(company_info) %></td>
+        <td><%= link_to 'Destroy', company_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company info', new_company_info_path %>
