@@ -26,6 +26,7 @@ class LogosController < ApplicationController
   def create
     @logo = current_user.logos.build(logo_params)
     @logo.name = "#{current_user.company_info.company_name} - #{(Logo.last.id) + 1}"
+    # ApiAction.new.create_logo(@logo.name,"www.wyncode.com",@logo.image.url)
     respond_to do |format|
       if @logo.save
         format.html { redirect_to dashboard_index_path}
@@ -42,7 +43,7 @@ class LogosController < ApplicationController
   def update
     respond_to do |format|
       if @logo.update(logo_params)
-        format.html { redirect_to @logo, notice: 'Logo was successfully updated.' }
+        format.html { redirect_to dashboard_index_path, notice: 'Logo was successfully updated.' }
         format.json { render :show, status: :ok, location: @logo }
       else
         format.html { render :edit }
