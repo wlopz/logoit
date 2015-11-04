@@ -1,5 +1,11 @@
 class CompanyInfosController < ApplicationController
   before_action :set_company_info, only: [:show, :edit, :update, :destroy]
+  before_action :check_existance, only: [:new, :create]
+
+  def check_existance
+    redirect_to dashboard_index_path if current_user.company_info.id != nil
+  end
+  helper_method :check_existance
 
   # GET /company_infos
   # GET /company_infos.json
@@ -24,11 +30,11 @@ class CompanyInfosController < ApplicationController
   # POST /company_infos
   # POST /company_infos.json
   def create
-    @company_info = CompanyInfo.new(company_info_params)
+    @company_info = current_user.build_company_info(company_info_params)
 
     respond_to do |format|
       if @company_info.save
-        format.html { redirect_to @company_info, notice: 'Company info was successfully created.' }
+        format.html { redirect_to dashboard_index_path, notice: 'Company info was successfully created.' }
         format.json { render :show, status: :created, location: @company_info }
       else
         format.html { render :new }
