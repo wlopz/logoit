@@ -6,6 +6,7 @@ gem 'rails', '4.2.4'
 
 gem 'pg'
 
+gem 'unirest'
 group :production do
   gem 'rails_12factor'
 end

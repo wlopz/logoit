@@ -3,7 +3,7 @@ class CompanyInfosController < ApplicationController
   before_action :check_existance, only: [:new, :create]
 
   def check_existance
-    redirect_to dashboard_index_path if current_user.company_info.id != nil
+    redirect_to dashboard_index_path if current_user.company_info != nil
   end
   helper_method :check_existance
 

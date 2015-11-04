@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "landing#home"
 
   get "dashboard/index" => 'dashboard#index'
+  # get '/users/sign_out' => 'landing#home'
 
   devise_for :users, controllers: {
         registrations: 'users/registrations'
