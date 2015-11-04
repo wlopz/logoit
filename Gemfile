@@ -6,6 +6,7 @@ gem 'rails', '4.2.4'
 
 gem 'pg'
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk'
 gem 'unirest'
 group :production do
   gem 'rails_12factor'
