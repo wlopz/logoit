@@ -11,6 +11,9 @@
 				<%= image_tag img.image.url(:medium)%>
 			</div>
 			<div>
+				<%= img.name%>
+			</div>
+			<div>
 				<%= link_to "edit", edit_logo_path(img) %>
 				<%= link_to "remove", img, method: :delete%>
 			</div>

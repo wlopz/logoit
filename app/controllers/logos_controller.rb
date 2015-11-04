@@ -25,7 +25,7 @@ class LogosController < ApplicationController
   # POST /logos.json
   def create
     @logo = current_user.logos.build(logo_params)
-
+    @logo.name = "#{current_user.company_info.company_name} - #{(Logo.last.id) + 1}"
     respond_to do |format|
       if @logo.save
         format.html { redirect_to dashboard_index_path}
