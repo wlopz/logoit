@@ -1,5 +1,5 @@
 <p> Home </p>
-
+<% redirect_to dashboard_index_path if user_signed_in?%>
 <% if user_signed_in? %>
 	<%= link_to 'Logout', destroy_user_session_path,:method => :delete %>
 <% else %>

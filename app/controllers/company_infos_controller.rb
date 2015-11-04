@@ -6,7 +6,6 @@ class CompanyInfosController < ApplicationController
     redirect_to dashboard_index_path if current_user.company_info != nil
   end
   helper_method :check_existance
-
   # GET /company_infos
   # GET /company_infos.json
   def index

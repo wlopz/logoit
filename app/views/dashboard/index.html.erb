@@ -1,3 +1,19 @@
-<p> Dashboard </p>
-
 <%= link_to 'Logout', destroy_user_session_path,:method => :delete %>
+
+<h1>Your Logos</h1>
+<div>
+	<%= link_to 'Add +',  new_logo_path%>
+</div>
+<div>
+	<% Logo.where(user_id: current_user.id).to_a.each do |img| %>
+		<span>
+			<div>
+				<%= image_tag img.image.url(:medium)%>
+			</div>
+			<div>
+				<%= link_to "edit", edit_logo_path(img) %>
+				<%= link_to "remove", img, method: :delete%>
+			</div>
+		</span>
+	<%end%>
+</div>
