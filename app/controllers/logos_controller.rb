@@ -1,5 +1,6 @@
 class LogosController < ApplicationController
   before_action :set_logo, only: [:show, :edit, :update, :destroy]
+  before_action :set_campaign, only: [:new, :create]
 
   # GET /logos
   # GET /logos.json
@@ -24,7 +25,7 @@ class LogosController < ApplicationController
   # POST /logos
   # POST /logos.json
   def create
-    @logo = current_user.logos.build(logo_params)
+    @logo = @campaign.logos.new(logo_params)
     # @logo.name = "#{current_user.company_info.company_name} - #{Time.now.to_i}"
     # filename = params[:logo][:image].tempfile.path
     # ApiAction.new.create_logo(@logo.name,"www.wyncode.com",filename)
@@ -44,7 +45,7 @@ class LogosController < ApplicationController
   def update
     respond_to do |format|
       if @logo.update(logo_params)
-        format.html { redirect_to dashboard_index_path, notice: 'Logo was successfully updated.' }
+        format.html { redirect_to campaign_path(@campaign), notice: 'Logo was successfully updated.' }
         format.json { render :show, status: :ok, location: @logo }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class LogosController < ApplicationController
   def destroy
     @logo.destroy
     respond_to do |format|
-      format.html { redirect_to dashboard_index_path, notice: 'Logo was successfully destroyed.' }
+      format.html { redirect_to campaign_path(@logo.campaign), notice: 'Logo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,8 +70,12 @@ class LogosController < ApplicationController
       @logo = Logo.find(params[:id])
     end
 
+    def set_campaign
+      @campaign = Campaign.find(params[:campaign_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def logo_params
-      params.require(:logo).permit(:image, :user_id)
+      params.require(:logo).permit(:image, :campaign_id, :user_id)
     end
 end

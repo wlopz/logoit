@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :logos
+  resources :campaigns do
+      resources :logos
+  end
   root to: "landing#home"
 
   get "dashboard/index" => 'dashboard#index'

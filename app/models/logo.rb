@@ -8,4 +8,6 @@ class Logo < ActiveRecord::Base
       	:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] 
       }
 	  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+	  belongs_to :campaign
+	  belongs_to :user
 end

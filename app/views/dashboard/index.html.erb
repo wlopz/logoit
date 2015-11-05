@@ -1,21 +1,24 @@
 <%= link_to 'Logout', destroy_user_session_path,:method => :delete %>
 
-<h1>Your Logos</h1>
+<h1>Dashboard</h1>
 <div>
-	<%= link_to 'Add +',  new_logo_path%>
+	<%= link_to 'Create New Campaign',  new_campaign_path%>
 </div>
+<h1>Campaigns</h1>
 <div>
-	<% Logo.where(user_id: current_user.id).to_a.each do |img| %>
+	<% Campaign.where(user_id: current_user.id).to_a.each do |camp| %>
 		<span>
 			<div>
-				<%= image_tag img.image.url(:medium)%>
+				<%=link_to "#{camp.name} | #{camp.url}", campaign_path(camp)%>
 			</div>
+ 			<div>
+				<% @logo = Logo.where(campaign_id: camp).to_a%>
+				<% if (@logo.length > 0) %>
+					<%=link_to(image_tag(@logo[0].image.url(:medium)), campaign_path(camp))%>
+				<% end %>
 			<div>
-				<%= img.name%>
+				<%=link_to "Remove",camp, method: :delete%>
 			</div>
-			<div>
-				<%= link_to "edit", edit_logo_path(img) %>
-				<%= link_to "remove", img, method: :delete%>
 			</div>
 		</span>
 	<%end%>

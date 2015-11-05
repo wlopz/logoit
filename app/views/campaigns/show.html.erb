@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @campaign.url %>
+</p>
+<%= link_to "Add Images", new_campaign_logo_path(@campaign) %>
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', dashboard_index_path %>
+<div>
+	<% Logo.where(campaign_id: @campaign).to_a.each do |logo|%>
+	<div>
+		<%= image_tag logo.image.url(:medium) %>
+	</div>
+	<div>
+		<%= link_to 'Edit', edit_logo_path(logo) %>
+		<%= link_to 'Remove', logo, method: :delete %>
+	</div>
+	<% end %>
+</div>
+
+

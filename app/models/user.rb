@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   has_one :company_info
   has_many :logos
+  has_many :campaigns
 
 end
