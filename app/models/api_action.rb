@@ -2,7 +2,6 @@ class ApiAction < Logo
 
   	def create_logo(name,url,image_location)
 		create_item(name,url)
-		sleep(2)
 		create_image(image_location,@uuid_item)
 	end
 
