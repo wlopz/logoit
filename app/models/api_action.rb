@@ -16,7 +16,7 @@ class ApiAction < Logo
 	        	"url" => "#{url}" 
 	        }.to_json
     	@uuid_item = response.body["uuid"]
-    	pp response
+    	# pp response
     	return @uuid_item
 	end
 
@@ -26,6 +26,6 @@ class ApiAction < Logo
 	            'item' => "/api/v0/item/#{uuid}/",
 	       		'file' => File.open(image_location)
 	        }
-	    pp response
+	    # pp response
 	end
 end

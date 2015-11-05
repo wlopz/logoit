@@ -26,7 +26,7 @@ class CampaignsController < ApplicationController
   def create
     @campaign = current_user.campaigns.build(campaign_params)
     create_api_item 
-    p @campaign_uuid
+    p @campaign_uuid 
     @campaign.uuid = @campaign_uuid
     respond_to do |format|
       if @campaign.save
