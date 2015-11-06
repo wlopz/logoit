@@ -26,9 +26,11 @@ class LogosController < ApplicationController
   # POST /logos.json
   def create
     @logo = @campaign.logos.new(logo_params)
-    # @logo.name = "#{current_user.company_info.company_name} - #{Time.now.to_i}"
-    # filename = params[:logo][:image].tempfile.path
-    # ApiAction.new.create_logo(@logo.name,"www.wyncode.com",filename)
+    @logo.name = "#{current_user.company_info.company_name} - #{Time.now.to_i}"
+    filename = params[:logo][:image].tempfile.path
+    create_api_image
+    @api_image.create_image(@campaign.uuid,filename)
+    @logo.uuid_image = @api_image.uuid_image
     respond_to do |format|
       if @logo.save
         format.html { redirect_to dashboard_index_path}
@@ -57,6 +59,7 @@ class LogosController < ApplicationController
   # DELETE /logos/1
   # DELETE /logos/1.json
   def destroy
+    ApiAction.new.destroy_image(@logo.uuid_image)
     @logo.destroy
     respond_to do |format|
       format.html { redirect_to campaign_path(@logo.campaign), notice: 'Logo was successfully destroyed.' }
@@ -70,6 +73,9 @@ class LogosController < ApplicationController
       @logo = Logo.find(params[:id])
     end
 
+    def create_api_image
+      @api_image = ApiAction.new
+    end
     def set_campaign
       @campaign = Campaign.find(params[:campaign_id])
     end
