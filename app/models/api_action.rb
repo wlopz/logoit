@@ -27,8 +27,8 @@ class ApiAction
 		 response = Unirest.put"https://my.craftar.net/api/v0/item/#{uuid_item}/?api_key=edc7de4e6ead658c275e09924669f23020c84469",
 		 	headers:{"Content-Type" => "application/json"},
 		 	parameters:{
-		 		"name": "#{name}",
-         		"url": "#{url}" 
+		 		"name"=> "#{name}",
+         		"url"=> "#{url}" 
 		 	}.to_json
 
 		p "********response: #{response.inspect}********"
