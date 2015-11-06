@@ -1,17 +1,35 @@
 class ApiAction < Logo
 
-	def destoy_logoO(uuid_item)
-		response = Unirest.delete"https://my.craftar.net/api/v0/item/#{uuid_item}/?api_key=edc7de4e6ead658c275e09924669f23020c84469",
+	def destoy_logo(uuid_image)
+		response = Unirest.delete"https://my.craftar.net/api/v0/image/#{uuid_item}/?api_key=edc7de4e6ead658c275e09924669f23020c84469",
 	    headers:{"Content-Type" => "application/json"}
 	end
 
-	def create_item(name,url)
+	def destroy_campaign(uuid_item)
+  		response = Unirest.delete"https://my.craftar.net/api/v0/item/#{uuid_item}/?api_key=edc7de4e6ead658c275e09924669f23020c84469",
+	    	headers:{"Content-Type" => "application/json"}
+	    p "--------#{response.inspect}-----------"
+	    p "--------#{uuid_item}----------"
+	end
+
+	def update_campaign(uuid_item,name,url)
+		 response = Unirest.put"https://my.craftar.net/api/v0/item/#{uuid_item}/?api_key=edc7de4e6ead658c275e09924669f23020c84469",
+		 	headers:{"Content-Type" => "application/json"},
+		 	parameters:{
+		 		"name": "#{name}",
+         		"url": "#{url}" 
+		 	}
+
+		p "----------#{response.inspect}-------------"
+	end
+
+	def create_campaign(name,url)
 	  	response = Unirest.post'https://my.craftar.net/api/v0/item/?api_key=edc7de4e6ead658c275e09924669f23020c84469', 
 	        headers:{ 
 	        	"Content-Type" => "application/json" 
 	        }, 
 	        parameters: { 
-	            "collection" => "/api/v0/collection/f749848ef11d434c8894004bcef80229/",
+	            "collection" => "/api/v0/collection/06995029612e4377aa078b60af233972/",
 	       		"name" => "#{name}",
 	        	"url" => "#{url}" 
 	        }.to_json

@@ -25,9 +25,8 @@ class CampaignsController < ApplicationController
   # POST /campaigns.json
   def create
     @campaign = current_user.campaigns.build(campaign_params)
-    create_api_item 
-    p @campaign_uuid 
-    @campaign.uuid = @campaign_uuid
+    create_api_item
+    @campaign.uuid = @campaign_api.uuid_item
     respond_to do |format|
       if @campaign.save
         format.html { redirect_to campaign_path(@campaign), notice: 'Campaign was successfully created.' }
@@ -44,6 +43,7 @@ class CampaignsController < ApplicationController
   def update
     respond_to do |format|
       if @campaign.update(campaign_params)
+        ApiAction.new.update_campaign(@campaign.uuid,@campaign.name,@campaign.url)
         format.html { redirect_to dashboard_index_path, notice: 'Campaign was successfully updated.' }
         format.json { render :show, status: :ok, location: @campaign }
       else
@@ -56,6 +56,7 @@ class CampaignsController < ApplicationController
   # DELETE /campaigns/1
   # DELETE /campaigns/1.json
   def destroy
+    ApiAction.new.destroy_campaign(@campaign.uuid)
     Logo.where(campaign_id: @campaign).to_a.each do |logo|
       logo.destroy
     end
@@ -68,7 +69,8 @@ class CampaignsController < ApplicationController
 
   private
     def create_api_item 
-      @campaign_uuid = ApiAction.new.create_item(@campaign.name,@campaign.url)
+      @campaign_api = ApiAction.new
+      @campaign_api.create_campaign(@campaign.name,@campaign.url)
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_campaign
