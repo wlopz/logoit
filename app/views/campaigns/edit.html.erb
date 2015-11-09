@@ -1,5 +1,18 @@
-<h1>Editing Campaign</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="col-md-6 col-md-offset-3">
+    <div id="editcmpgn" class="panel panel-default box-shadow--16dp">
+		<div id="newlogohdg" class="panel-heading"><h1>Editing Campaign</h1></div>
+		<br>
+			<div id="cntnrnewlogo" class="container">
+				<%= render 'form' %>
+				<%= link_to '', campaign_path(@campaign), class: 'glyphicon glyphicon-chevron-left', style: "font-size:28px;" %>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', campaign_path(@campaign) %>

@@ -13,3 +13,164 @@
  *= require_tree .
  *= require_self
  */
+
+ #masthead { 
+ min-height:250px;
+}
+
+#masthead h1 {
+ font-size: 30px;
+ line-height: 1;
+ padding-top:20px;
+}
+
+#masthead .well {
+ margin-top:8%;
+ margin-right: 20%; /*###NOT DOING IT AUTOMATICALLY*/
+ padding-right:50px;
+}
+
+/*@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 50px;
+  }
+}*/
+
+/*.panel-info>.panel-heading {
+    color: #51acd1;
+    background-color: #999;
+    border-color: #999;
+}*/
+
+body {
+	background: orange;
+}
+
+.panel-heading.masthead {
+    padding: 0px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #51acd1;
+}
+
+.panel-info.masthead {
+    border-color: #999;
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+#namecmpgn {
+padding-left: 25px;
+padding-right: 25px;
+}
+
+div.panel.panel-default.login-panel {
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+#mainpanel {
+	padding-bottom: 25px;
+}
+
+#newcmpgn {
+  font-size: 16px;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+#cmpgnform {
+	padding-top: 25px;
+}
+
+#cmpgnurl {
+	font-size: 30px;
+	padding-left: 100px;
+	padding-top: 100px;
+}
+
+#newlogo {
+	font-size: 16px;
+  	text-align: center;
+  	padding-bottom: 25px;
+}
+
+#cntnrnewlogo {
+	padding-right: 650px;
+}
+
+#editcmpgn {
+	padding-bottom: 25px;
+}
+
+#edituser {
+	padding-bottom: 25px;
+}
+
+#imgs {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/*p.description {
+  color: #585858;
+  font-weight: 500;
+  font-size: 18px;
+}*/
+
+/*p.askedby {
+  color: #585858;
+  font-weight: 500;
+  font-size: 16px;
+}*/
+
+/*p.show {
+  color: orange;
+}*/
+
+/*a { color: orange; font-size: 16px;}*/
+a:hover { color: orange; }
+
+.navbar-default .navbar-nav>li>a {
+    color: orange;
+    font-size: 18px;
+}
+.navbar-brand, .navbar-nav>li>a {
+    text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    font-size: 28px;
+}
+
+.navbar-default .navbar-link {
+    color: #777;
+    font-size: 16px;
+}
+
+.navbar-default .navbar-text {
+    color: orange;
+    font-size: 16px;
+}
+
+/*SHADOWS*/
+
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
