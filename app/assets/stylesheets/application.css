@@ -44,6 +44,21 @@
 
 body {
 	background: orange;
+	/*font-family: Rajdhani, Helvetica, Arial, sans-serif;*/
+	font-family: Quantico, sans-serif;
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: orange;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+  width: 60%;
 }
 
 .panel-heading.masthead {
@@ -63,7 +78,7 @@ body {
 }
 
 #namecmpgn {
-padding-left: 25px;
+padding-left: 30px;
 padding-right: 25px;
 }
 
