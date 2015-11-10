@@ -148,7 +148,11 @@ div.panel.panel-default.login-panel {
 }*/
 
 /*a { color: orange; font-size: 16px;}*/
-a:hover { color: orange; }
+a:hover { 
+	background-color: transparent;
+    color: orange;
+    text-decoration: none; 
+}
 
 .navbar-default .navbar-nav>li>a {
     color: orange;
@@ -168,6 +172,15 @@ a:hover { color: orange; }
     color: orange;
     font-size: 16px;
 }
+
+/*.nav_logo {position: absolute; z-index: 1000}
+
+.nav_logo_image { background: url('assets/images/Logoit-03.png') }*/
+
+/*.image-size {
+  max-width: 30px;
+  max-height: 30px;
+}*/
 
 /*SHADOWS*/
 
