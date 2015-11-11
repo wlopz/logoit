@@ -14,7 +14,8 @@
  *= require_self
  */
 
- #masthead { 
+#masthead {
+ padding-top: 100px;
  min-height:250px;
 }
 
@@ -95,7 +96,15 @@ div.panel.panel-default.login-panel {
 #newcmpgn {
   font-size: 16px;
   text-align: left;
+  padding-top: 150px;
+}
+
+#newcmpgn2 {
   padding-bottom: 25px;
+}
+
+#newcmpnyinfo {
+  padding-top: 150px;
 }
 
 #cmpgnform {
@@ -110,8 +119,12 @@ div.panel.panel-default.login-panel {
 
 #newlogo {
 	font-size: 16px;
-  	text-align: center;
-  	padding-bottom: 25px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#newlogo2 {
+  padding-bottom: 25px;
 }
 
 #cntnrnewlogo {
@@ -119,16 +132,36 @@ div.panel.panel-default.login-panel {
 }
 
 #editcmpgn {
-	padding-bottom: 25px;
+  padding-top: 100px;
+}
+
+#editcmpgn2 {
+  padding-bottom: 25px;
 }
 
 #edituser {
 	padding-bottom: 25px;
 }
 
+#editprofile {
+  padding-top: 100px;
+}
+
 #imgs {
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+#dashboardindex {
+  padding-top: 100px;
+}
+
+#signup {
+  padding-top: 150px;
+}
+
+#signin {
+  padding-top: 150px;
 }
 
 /*p.description {
