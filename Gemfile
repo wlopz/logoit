@@ -8,6 +8,7 @@ gem 'pg'
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '< 2.0'
 gem 'unirest'
+gem 'jquery-ui-rails'
 group :production do
   gem 'rails_12factor'
 end

@@ -11,6 +11,21 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var ready = function() {
+	
+	$(".shake").jrumble({ speed: 0, x: 1,y: 0, rotation: 0 });
+
+	$(".glyphicon").hover(function(){
+		$(this).trigger('startRumble');
+	}, function(){
+		$(this).trigger('stopRumble');
+	});
+
+}
+$(document).ready(ready);
+$(document).on('page:load', ready());
