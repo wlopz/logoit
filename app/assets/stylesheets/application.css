@@ -15,7 +15,7 @@
  */
 
 #masthead {
- padding-top: 100px;
+ padding-top: 40  px;
  min-height:250px;
 }
 
@@ -76,11 +76,14 @@ hr {
 
 .panel-heading {
     text-align: center;
+    border-bottom: 1px solid black;
 }
 
 #namecmpgn {
 padding-left: 30px;
 padding-right: 25px;
+margin-top: 4%;
+text-align: center
 }
 
 div.panel.panel-default.login-panel {
@@ -91,6 +94,9 @@ div.panel.panel-default.login-panel {
 
 #mainpanel {
 	padding-bottom: 25px;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+
 }
 
 #newcmpgn {
@@ -206,6 +212,16 @@ a:hover {
     font-size: 16px;
 }
 
+.col-sm-5 {
+  position: absolute;
+}
+.col-sm-6 {
+  position: relative;
+  left: 25%;
+}
+.glyphicon {
+  padding:10,10,10,10;
+}
 /*.nav_logo {position: absolute; z-index: 1000}
 
 .nav_logo_image { background: url('assets/images/Logoit-03.png') }*/
