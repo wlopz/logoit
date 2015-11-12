@@ -15,7 +15,7 @@
  */
 
 #masthead {
- padding-top: 40  px;
+ padding-top: 40px;
  min-height:250px;
 }
 
@@ -28,24 +28,19 @@
 #masthead .well {
  margin-top:8%;
  margin-right: 20%; /*###NOT DOING IT AUTOMATICALLY*/
- padding-right:50px;
+ text-align: center;
 }
 
-/*@media screen and (min-width: 768px) {
-  #masthead h1 {
-    font-size: 50px;
-  }
-}*/
+.well {
+  width: 360px;
+  height: 320px;
+  padding: 0;
+  position: relative;
 
-/*.panel-info>.panel-heading {
-    color: #51acd1;
-    background-color: #999;
-    border-color: #999;
-}*/
+}
 
 body {
 	background: orange;
-	/*font-family: Rajdhani, Helvetica, Arial, sans-serif;*/
 	font-family: Quantico, sans-serif;
 }
 
@@ -167,7 +162,7 @@ div.panel.panel-default.login-panel {
 }
 
 #signin {
-  padding-top: 150px;
+  padding-top: 150px; 
 }
 
 /*p.description {
@@ -218,9 +213,18 @@ a:hover {
 .col-sm-6 {
   position: relative;
   left: 25%;
+  text-align: center
 }
 .glyphicon {
   padding:10,10,10,10;
+}
+.col-md-offset-4 {
+    margin-left: 29.333333%;
+}
+div.shake {
+}
+div.image{
+
 }
 /*.nav_logo {position: absolute; z-index: 1000}
 

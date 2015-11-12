@@ -17,15 +17,30 @@
 //= require_tree .
 
 var ready = function() {
+	var container = $('.well');
+	var content = $('.image');
 	
-	$(".shake").jrumble({ speed: 0, x: 1,y: 0, rotation: 0 });
+	$(".shake").jrumble({x: 1,y: 0, rotation: 0 });
 
 	$(".glyphicon").hover(function(){
-		$(this).trigger('startRumble');
+		$(this).closest("div.shake").trigger('startRumble');
 	}, function(){
-		$(this).trigger('stopRumble');
+		$(this).closest("div.shake").trigger('stopRumble');
 	});
+	 // $(".image").css("top-margin",$(".image").closest('.well').height() / 2);
+	// $('.well').height());
+	// content.css("left", (container.width()-content.width())/2);
+	// content.css("top", (container.height()-content.height())/2);
 
 }
 $(document).ready(ready);
 $(document).on('page:load', ready());
+
+$(window).load(function() {
+	$(".well").each(function(index, element) {
+		var img = $(element).children(".image");
+		$(img).attr("id", index);
+		console.log($(img).children("a").children("img").outerHeight())	;
+		$("div#" + index).css("margin-top", ( 320 - $(img).children("a").children("img").outerHeight())/2); 
+	});
+});
