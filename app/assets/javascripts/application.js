@@ -27,20 +27,13 @@ var ready = function() {
 	}, function(){
 		$(this).closest("div.shake").trigger('stopRumble');
 	});
-	 // $(".image").css("top-margin",$(".image").closest('.well').height() / 2);
-	// $('.well').height());
-	// content.css("left", (container.width()-content.width())/2);
-	// content.css("top", (container.height()-content.height())/2);
-
+	$(".well").each(function(index, element) {
+		var img = $(element).children(".image");
+		$(img).imagesLoaded().always(function() {
+			$(img).attr("id", index);
+			$("div#" + index).css("margin-top", ( 320 - $(img).outerHeight())/2); 
+		});
+	});
 }
 $(document).ready(ready);
 $(document).on('page:load', ready());
-
-$(window).load(function() {
-	$(".well").each(function(index, element) {
-		var img = $(element).children(".image");
-		$(img).attr("id", index);
-		console.log($(img).children("a").children("img").outerHeight())	;
-		$("div#" + index).css("margin-top", ( 320 - $(img).children("a").children("img").outerHeight())/2); 
-	});
-});

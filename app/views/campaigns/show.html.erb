@@ -3,41 +3,49 @@
 
 	<p id="notice"><%= notice %></p>
 
-    <div id="mainpanel" class="panel panel-default box-shadow--16dp">
-    	<div class="panel-heading"><h1><b><%= @campaign.name %></b></h1></div>
-	    	<!-- <div class="well well-lg"> -->
-		        <div class="row">
-			        <div id="cmpgnurl" class="col-md-7">
-			        	<strong>Url:</strong>
-						  <%= @campaign.url %>
-						<p>
-						<br>
-						  <%= link_to '', dashboard_index_path, class: 'glyphicon glyphicon-chevron-left', style: "font-size:28px;" %> <%= link_to '', edit_campaign_path(@campaign), class: 'glyphicon glyphicon-edit', style: "font-size:28px;" %>
-						</p>	
-					</div>
-					<div class="col-md-5">
-		                <div class="well well-lg">
-		                    <div class="row">
-		                        <div class="col-sm-6">
-									<%= link_to "", new_campaign_logo_path(@campaign), class: 'glyphicon glyphicon-plus', style: "font-size:28px;" %>
-									<div>
-										<% Logo.where(campaign_id: @campaign).to_a.each do |logo|%>
-										<div id="imgs">
-											<%= image_tag logo.image.url(:medium) %>
-										</div>
-										<div>
-											<%= link_to '', logo, class: 'glyphicon glyphicon-remove', style: "font-size:28px;", method: :delete %>
-										</div>
-										<% end %>
-									</div>
-								</div>
-							</div>
+	<div id="mainpanel" class="panel panel-default box-shadow--16dp">
+		<div class="panel-heading">
+			<h1>
+				<b><%= @campaign.name %></b>
+			</h1>	
+			<h4>
+				<%= @campaign.url %>
+			</h4>
+			<%= link_to '', dashboard_index_path, class: 'glyphicon glyphicon-chevron-left', style: "font-size:28px;" %>
+			<br>
+			<p class="edit">
+				<%= link_to '', edit_campaign_path(@campaign), class: 'glyphicon glyphicon-edit', style: "font-size:28px;" %>
+				&nbsp;
+				<%= link_to "", new_campaign_logo_path(@campaign), class: 'glyphicon glyphicon-plus', style: "font-size:28px;" %>	
+			</p>
+		</div>
+		<div class="campaign-row row">
+			<div>
+				<% logos = Logo.where(campaign_id: @campaign).to_a %>
+				<% if logos.length > 0%>
+					<% logos.each do |logo|%>
+					<div class="well well-lg campagin-show-well">
+						<div class="image">	
+							<%= image_tag logo.image.url(:medium) %>
+						</div>
+						<div>
+							<p class="delete">
+								<%= link_to '', logo, class: 'glyphicon glyphicon-remove', style: "font-size:28px;", method: :delete %>	
+							</p>
 						</div>
 					</div>
-				</div>
-			<!-- </div> -->
+					<% end %>
+					<%else%>
+					<div class="well well-lg campagin-show-well">
+						<div class="image">	
+							<%= image_tag 'placeholder.png' %>
+						</div>
+					</div>
+				<%end%>
+			</div>
 		</div>
 	</div>
+</div>
 </div>
 
 
