@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require dropzone
+ *= require agency/agency.css
  */
 
 #masthead {
@@ -293,6 +294,7 @@ input[type="password"]{
 .image-upload-btn:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
+<<<<<<< HEAD
 .dropzone-area{
   margin-top: 3%; 
   text-align: center;
@@ -307,6 +309,10 @@ input[type="password"]{
   margin: 40px 0 0 0;
   padding: 0 0 0 0;
 }
+=======
+
+
+>>>>>>> 4c23e7dffbcefc9c8242135c8b93877705e70845
 /*.nav_logo {position: absolute; z-index: 1000}
 
 .nav_logo_image { background: url('assets/images/Logoit-03.png') }*/
