@@ -122,11 +122,14 @@ div.panel.panel-default.login-panel {
 #newlogo {
 	font-size: 16px;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 10%;
 }
 
 #newlogo2 {
   padding-bottom: 25px;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 280px
 }
 
 #cntnrnewlogo {
@@ -218,6 +221,74 @@ a:hover {
  .campaign-row {
   margin-left: 15px !important;
  }
+input[type="email"]{
+  background: #f2f2f2;
+  font-size: 24px;
+  height: 35px;
+  margin-left: 3em;
+  width: 105%;
+}
+input[type="password"]{
+  font-size:  35px;
+  background: #f2f2f2;
+  font-size: 24px;
+  height: 35px;
+  margin-left: 3em;
+  width: 30%;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+  padding-top: 7px;
+  font-size:  35px;
+}
+.button-logoit {
+  font-style: bold;
+  margin-left: 11%;
+  width: 20%;
+  background: #f2f2f2;
+}
+.button-logoit:hover{
+  background: #ffc266;
+}
+.btn-danger {
+  margin-left: 11%;
+  width: 20%;
+}
+#drop {
+  display: block;
+  height: 50px;
+}
+.image-upload-btn {
+
+}
+.image-upload-btn::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.image-upload-btn::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: #f2f2f2;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  margin-left: 30%;
+  margin-top: 10%;
+  height: 5em;
+  width: 17em;
+}
+.image-upload-btn:hover::before {
+  background: #ffc266;
+}
+.image-upload-btn:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
 /*.nav_logo {position: absolute; z-index: 1000}
 
 .nav_logo_image { background: url('assets/images/Logoit-03.png') }*/

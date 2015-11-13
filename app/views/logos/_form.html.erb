@@ -1,21 +1,13 @@
-<%= form_for([@campaign,@logo] , html: {multipart: true}) do |f| %>
-  <% if @logo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@logo.errors.count, "error") %> prohibited this logo from being saved:</h2>
 
-      <ul>
-      <% @logo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <br>
-  <div>
-    <%= f.file_field :image %>
+
+<%= form_for([@campaign,@logo] , html: {multipart: true}) do |f| %>
+    <%= f.file_field :image, class: "image-upload-btn",title: " " %>
   </div>
   <br>
   <div class="actions">
     <%= f.submit class: "btn btn-default" %>
   </div>
 <% end %>
+<!--         <form action="/file-upload"
+      class="dropzone"
+      id="my-awesome-dropzone"></form> -->
