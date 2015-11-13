@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require dropzone
 //= require turbolinks
 //= require_tree .
 
@@ -27,13 +28,24 @@ var ready = function() {
 	}, function(){
 		$(this).closest("div.shake").trigger('stopRumble');
 	});
-	$(".well").each(function(index, element) {
-		var img = $(element).children(".image");
-		$(img).imagesLoaded().always(function() {
-			$(img).attr("id", index);
-			$("div#" + index).css("margin-top", ( 320 - $(img).outerHeight())/2); 
-		});
+	Dropzone.autoDiscover = false;
+
+	// grap our upload form by its id
+	$("#logoupload").dropzone({
+		// restrict image size to a maximum 1MB
+		maxFilesize: 1,
+		// changed the passed param to one accepted by
+		// our rails app
+		paramName: "logo[image]",
+		// show remove links on each image upload
+		addRemoveLinks: true
 	});
 }
 $(document).ready(ready);
-$(document).on('page:load', ready());
+$(document).on('page:load', ready);
+
+
+
+
+
+

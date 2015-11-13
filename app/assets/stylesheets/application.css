@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require dropzone
  */
 
 #masthead {
@@ -123,13 +124,15 @@ div.panel.panel-default.login-panel {
 	font-size: 16px;
   text-align: center;
   padding-top: 10%;
+  margin-left: -1% !important;
 }
 
 #newlogo2 {
   padding-bottom: 25px;
   border: 1px solid #42464b;
   border-radius: 6px;
-  height: 280px
+  height: 570px;
+  width: 1130px;
 }
 
 #cntnrnewlogo {
@@ -245,7 +248,8 @@ input[type="password"]{
   font-style: bold;
   margin-left: 11%;
   width: 20%;
-  background: #f2f2f2;
+  background-image: linear-gradient(to bottom,#ffcc80 0,#ffad33 100%);
+  background-color: #e68a00;
 }
 .button-logoit:hover{
   background: #ffc266;
@@ -288,6 +292,20 @@ input[type="password"]{
 }
 .image-upload-btn:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.dropzone-area{
+  margin-top: 3%; 
+  text-align: center;
+}
+.dropzone-holder {
+  width: 90%;
+  margin: 0 auto;
+}
+.btn-logo{
+  width: 200px;
+  height: 50px;
+  margin: 40px 0 0 0;
+  padding: 0 0 0 0;
 }
 /*.nav_logo {position: absolute; z-index: 1000}
 

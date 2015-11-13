@@ -1,13 +1,15 @@
 
-
-<%= form_for([@campaign,@logo] , html: {multipart: true}) do |f| %>
-    <%= f.file_field :image, class: "image-upload-btn",title: " " %>
+<div class="dropzone-area">
+  <div class="dropzone-holder">
+    <%= form_for([@campaign,@logo] , html: {multipart: true, class: "dropzone", id: "logoupload"}) do |f| %>
+         <%# f.file_field :image, title: " " %>
+      <br>
+      <div class="actions">
+        <%# f.submit class: "btn btn-default" %>
+      </div>
+    <% end %>
   </div>
-  <br>
-  <div class="actions">
-    <%= f.submit class: "btn btn-default" %>
-  </div>
-<% end %>
+</div>
 <!--         <form action="/file-upload"
       class="dropzone"
       id="my-awesome-dropzone"></form> -->
