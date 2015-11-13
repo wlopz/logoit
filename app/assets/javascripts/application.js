@@ -18,15 +18,23 @@
 //= require agency/agency.js
 
 var ready = function() {
+	var container = $('.well');
+	var content = $('.image');
 	
-	$(".shake").jrumble({ speed: 0, x: 1,y: 0, rotation: 0 });
+	$(".shake").jrumble({x: 1,y: 0, rotation: 0 });
 
 	$(".glyphicon").hover(function(){
-		$(this).trigger('startRumble');
+		$(this).closest("div.shake").trigger('startRumble');
 	}, function(){
-		$(this).trigger('stopRumble');
+		$(this).closest("div.shake").trigger('stopRumble');
 	});
-
+	$(".well").each(function(index, element) {
+		var img = $(element).children(".image");
+		$(img).imagesLoaded().always(function() {
+			$(img).attr("id", index);
+			$("div#" + index).css("margin-top", ( 320 - $(img).outerHeight())/2); 
+		});
+	});
 }
 $(document).ready(ready);
 $(document).on('page:load', ready());

@@ -1,42 +1,32 @@
-<%#= link_to 'Logout', destroy_user_session_path,:method => :delete #%>
-
-<div id="dashboardindex" class"">
-	<div id="masthead" class="">
-	    <div id="mainpanel" class="panel panel-default box-shadow--16dp">
-	    	<div class="panel-heading"><h1><b>Campaigns</b></h1></div>
-	    	<!-- <div class="well well-lg"> -->
-		        <div class="row">
-		        	<% Campaign.where(user_id: current_user.id).to_a.each_with_index do |camp, index| %>
-			        	<div class="shake">
-				            <div id="namecmpgn" class="col-md-7">
-				                <h1 class=""><%=link_to "#{camp.name}", campaign_path(camp)%>
-				            		<p class="lead"><%=link_to "#{camp.url}", campaign_path(camp)%></p>
-				          		</h1>
-				          		<%= link_to '', camp, class: 'glyphicon glyphicon-remove', style: "font-size:28px;", 
-					            method: :delete %>
-				            </div>
-				            <div class="col-md-5">
-					                <div class="well well-lg">
-					                    <div class="row">
-					                        <div class="col-sm-6">
-					                            <!-- <img src="//placehold.it/180x100" class="img-responsive"> -->
-					                            <% @logo = Logo.where(campaign_id: camp).to_a%>
-												<% if (@logo.length > 0) %>
-													<%=link_to(image_tag(@logo[0].image.url(:medium)), campaign_path(camp))%>
-												<%else%>
-													<%=link_to(image_tag('placeholder.png'), campaign_path(camp))%>
-												<% end %>
-					                        </div>
-					                        <!-- <div class="col-sm-6">Some text here</div> -->
-					                    </div>
-					                </div>
-				            </div> 
-				        </div>
-			        <% end %>
-		        </div>
-		        <!-- <hr id="linebottom"> -->
-		    <!-- </div> -->
-	    </div>
-	    <!--/container-->
+	<div id="dashboardindex" class"">
+		<div id="masthead" class="">
+			<div id="mainpanel" class="panel panel-default box-shadow--16dp">
+				<div class="panel-heading"><h1><b>Campaigns</b></h1></div>
+				<div class="row">
+					<% Campaign.where(user_id: current_user.id).to_a.each_with_index do |camp, index| %>
+					<div class="shake">
+						<div id="namecmpgn" class="col-md-7">
+							<h1 class=""><%=link_to "#{camp.name}", campaign_path(camp)%>
+								<p class="lead"><%=link_to "#{camp.url}", campaign_path(camp)%></p>
+							</h1>
+							<%= link_to '', camp, class: 'glyphicon glyphicon-remove', style: "font-size:28px;", 
+							method: :delete %>
+						</div>
+						<div class="col-md-5">
+							<div class="well well-lg">
+								<div class="image">
+									<% @logo = Logo.where(campaign_id: camp).to_a%>
+									<% if (@logo.length > 0) %>
+									<%=link_to(image_tag(@logo[0].image.url(:medium)), campaign_path(camp))%>
+									<%else%>
+									<%=link_to(image_tag('placeholder.png'), campaign_path(camp))%>
+									<% end %>
+								</div>
+							</div>
+						</div> 
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>

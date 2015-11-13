@@ -16,7 +16,7 @@
  */
 
 #masthead {
- padding-top: 40  px;
+ padding-top: 10%;
  min-height:250px;
 }
 
@@ -29,24 +29,20 @@
 #masthead .well {
  margin-top:8%;
  margin-right: 20%; /*###NOT DOING IT AUTOMATICALLY*/
- padding-right:50px;
+ text-align: center;
 }
 
-/*@media screen and (min-width: 768px) {
-  #masthead h1 {
-    font-size: 50px;
-  }
-}*/
+.well {
+  width: 360px;
+  height: 320px;
+  padding: 0;
+  position: relative;
+  border-top: ;
 
-/*.panel-info>.panel-heading {
-    color: #51acd1;
-    background-color: #999;
-    border-color: #999;
-}*/
+}
 
 body {
 	background: orange;
-	/*font-family: Rajdhani, Helvetica, Arial, sans-serif;*/
 	font-family: Quantico, sans-serif;
 }
 
@@ -83,7 +79,7 @@ hr {
 #namecmpgn {
 padding-left: 30px;
 padding-right: 25px;
-margin-top: 4%;
+margin-top: 10%;
 text-align: center
 }
 
@@ -127,11 +123,14 @@ div.panel.panel-default.login-panel {
 #newlogo {
 	font-size: 16px;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 10%;
 }
 
 #newlogo2 {
   padding-bottom: 25px;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 280px
 }
 
 #cntnrnewlogo {
@@ -159,35 +158,14 @@ div.panel.panel-default.login-panel {
 	padding-bottom: 15px;
 }
 
-#dashboardindex {
-  padding-top: 100px;
-}
-
 #signup {
   padding-top: 150px;
 }
 
 #signin {
-  padding-top: 150px;
+  padding-top: 150px; 
 }
 
-/*p.description {
-  color: #585858;
-  font-weight: 500;
-  font-size: 18px;
-}*/
-
-/*p.askedby {
-  color: #585858;
-  font-weight: 500;
-  font-size: 16px;
-}*/
-
-/*p.show {
-  color: orange;
-}*/
-
-/*a { color: orange; font-size: 16px;}*/
 a:hover { 
 	background-color: transparent;
     color: orange;
@@ -219,9 +197,98 @@ a:hover {
 .col-sm-6 {
   position: relative;
   left: 25%;
+  text-align: center
 }
 .glyphicon {
   padding:10,10,10,10;
+}
+.col-md-offset-4 {
+    margin-left: 29.333333%;
+}
+ .glyphicon-chevron-left {
+  float: left;
+  margin-top: 20px;
+ }
+ .edit {
+  margin-right: 2em;
+ }
+ .delete {
+  margin-top: 6px  ;
+ }
+ .campagin-show-well {
+  margin: 20px  15px 0 0 !important; 
+  float: left;
+ }
+ .campaign-row {
+  margin-left: 15px !important;
+ }
+input[type="email"]{
+  background: #f2f2f2;
+  font-size: 24px;
+  height: 35px;
+  margin-left: 3em;
+  width: 105%;
+}
+input[type="password"]{
+  font-size:  35px;
+  background: #f2f2f2;
+  font-size: 24px;
+  height: 35px;
+  margin-left: 3em;
+  width: 30%;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+  padding-top: 7px;
+  font-size:  35px;
+}
+.button-logoit {
+  font-style: bold;
+  margin-left: 11%;
+  width: 20%;
+  background: #f2f2f2;
+}
+.button-logoit:hover{
+  background: #ffc266;
+}
+.btn-danger {
+  margin-left: 11%;
+  width: 20%;
+}
+#drop {
+  display: block;
+  height: 50px;
+}
+.image-upload-btn {
+
+}
+.image-upload-btn::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.image-upload-btn::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: #f2f2f2;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  margin-left: 30%;
+  margin-top: 10%;
+  height: 5em;
+  width: 17em;
+}
+.image-upload-btn:hover::before {
+  background: #ffc266;
+}
+.image-upload-btn:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 /*.nav_logo {position: absolute; z-index: 1000}
 
