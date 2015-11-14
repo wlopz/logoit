@@ -17,7 +17,7 @@
  */
 
 #masthead {
- padding-top: 10%;
+ padding-top: 15%;
  min-height:250px;
 }
 
@@ -124,7 +124,7 @@ div.panel.panel-default.login-panel {
 #newlogo {
 	font-size: 16px;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 15%;
   margin-left: -1% !important;
 }
 
@@ -141,7 +141,7 @@ div.panel.panel-default.login-panel {
 }
 
 #editcmpgn {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #editcmpgn2 {
@@ -311,6 +311,11 @@ input[type="password"]{
 #front-logo {
   background: url("splash.jpg");
   background-size: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 0 0 0 0;
 }
 /*.nav_logo {position: absolute; z-index: 1000}
 

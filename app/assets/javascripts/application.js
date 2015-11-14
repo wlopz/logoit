@@ -16,7 +16,8 @@
 //= require dropzone
 //= require turbolinks
 //= require_tree .
-//= require agency/agency.js
+//= require agency/agency
+
 
 var ready = function() {
 	var container = $('.well');
