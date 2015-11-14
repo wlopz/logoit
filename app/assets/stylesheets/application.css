@@ -318,9 +318,9 @@ input[type="password"]{
   background-size: cover;
 }
 
-.container {
-  width: 100%;
-  padding: 0 0 0 0;
+.funtainer {
+  width: 100% !important;
+  padding: 0 0 0 0 !important;
 }
 .login-forms {
   margin-left: 0px !important;
@@ -331,7 +331,10 @@ input[type="password"]{
 .edit-btn {
   margin-left: 30%;
 }
-
+.intro-heading, .intro-lead-in {
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
 
 /*.nav_logo {position: absolute; z-index: 1000}
 
