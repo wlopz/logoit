@@ -322,6 +322,17 @@ input[type="password"]{
   width: 100%;
   padding: 0 0 0 0;
 }
+.login-forms {
+  margin-left: 0px !important;
+}
+.btn-warning {
+  width: 40%;
+}
+.edit-btn {
+  margin-left: 30%;
+}
+
+
 /*.nav_logo {position: absolute; z-index: 1000}
 
 .nav_logo_image { background: url('assets/images/Logoit-03.png') }*/
