@@ -314,7 +314,7 @@ input[type="password"]{
   padding: 0 0 0 0;
 }
 #front-logo {
-  background: url("splash.jpg");
+  background: url("https://s3.amazonaws.com/logoit2/splash.jpg");
   background-size: cover;
 }
 
