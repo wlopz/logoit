@@ -229,16 +229,16 @@ input[type="email"]{
   background: #f2f2f2;
   font-size: 24px;
   height: 35px;
-  margin-left: 3em;
-  width: 105%;
+  margin-left: 5em;
+  width: 61%;
 }
 input[type="password"]{
   font-size:  35px;
   background: #f2f2f2;
   font-size: 24px;
   height: 35px;
-  margin-left: 3em;
-  width: 30%;
+  margin-left: 5em;
+  width: 61%;
 }
 ::-webkit-input-placeholder {
   text-align: center;
@@ -247,8 +247,8 @@ input[type="password"]{
 }
 .button-logoit {
   font-style: bold;
-  margin-left: 11%;
-  width: 20%;
+  margin-left: 30%;
+  width: 40%;
   background-image: linear-gradient(to bottom,#ffcc80 0,#ffad33 100%);
   background-color: #e68a00;
 }
@@ -256,8 +256,8 @@ input[type="password"]{
   background: #ffc266;
 }
 .btn-danger {
-  margin-left: 11%;
-  width: 20%;
+  margin-left: 30%;
+  width: 40%;
 }
 #drop {
   display: block;
