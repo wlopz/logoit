@@ -103,6 +103,10 @@ div.panel.panel-default.login-panel {
   padding-top: 150px;
 }
 
+#new_campaign {
+  padding: 25px 25px 25px 25px;
+}
+
 #newcmpgn2 {
   padding-bottom: 25px;
 }
