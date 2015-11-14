@@ -17,7 +17,7 @@
  */
 
 #masthead {
- padding-top: 15%;
+ padding-top: 10%;
  min-height:250px;
 }
 
@@ -117,6 +117,7 @@ div.panel.panel-default.login-panel {
 
 #cmpgnform {
 	padding-top: 25px;
+  padding-left: 25px;
 }
 
 #cmpgnurl {
@@ -140,8 +141,8 @@ div.panel.panel-default.login-panel {
   width: 1130px;
 }
 
-#cntnrnewlogo {
-	padding-right: 650px;
+#bckbtnedituser {
+  padding-left: 25px;
 }
 
 #editcmpgn {
