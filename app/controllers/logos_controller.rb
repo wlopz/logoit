@@ -47,7 +47,7 @@ class LogosController < ApplicationController
   def update
     respond_to do |format|
       if @logo.update(logo_params)
-        format.html { redirect_to campaign_path(@campaign), notice: 'Logo was successfully updated.' }
+        format.html { redirect_to campaign_path(@campaign)}
         format.json { render :show, status: :ok, location: @logo }
       else
         format.html { render :edit }
