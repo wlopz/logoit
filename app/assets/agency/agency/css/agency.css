@@ -10,7 +10,8 @@ body {
 }
 
 .text-muted {
-    color: #777;
+    font-size: 15px;
+    color: orange;
 }
 
 .text-primary {
@@ -234,6 +235,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         border: 0;
         background-color: white;
+        
 /*        -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;*/

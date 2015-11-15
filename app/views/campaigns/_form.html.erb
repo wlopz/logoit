@@ -11,14 +11,12 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "name",class: "login-forms new-campaign" %>
   </div>
   <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, placeholder: "website",class: "login-forms new-campaign" %>
   </div>
   <div class="actions">
-    <%= f.submit class: "btn btn-default" %>
+    <%= f.submit class: "btn btn-warning" %>
   </div>
 <% end %>

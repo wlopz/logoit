@@ -43,7 +43,8 @@
 }
 
 body {
-	background: orange;
+	background-image: url("Logos_background.jpg");
+
 	font-family: Quantico, sans-serif;
 }
 
@@ -104,11 +105,11 @@ div.panel.panel-default.login-panel {
 }
 
 #new_campaign {
-  padding: 25px 25px 25px 25px;
+  padding: 50px 25px 25px 25px;
 }
 
 #newcmpgn2 {
-  padding-bottom: 25px;
+  padding-bottom: 60px;
 }
 
 #newcmpnyinfo {
@@ -116,8 +117,7 @@ div.panel.panel-default.login-panel {
 }
 
 #cmpgnform {
-	padding-top: 25px;
-  padding-left: 25px;
+  width: 300px;
 }
 
 #cmpgnurl {
@@ -130,7 +130,7 @@ div.panel.panel-default.login-panel {
 	font-size: 16px;
   text-align: center;
   padding-top: 15%;
-  margin-left: -1% !important;
+  margin-left: 10px !important;
 }
 
 #newlogo2 {
@@ -240,13 +240,16 @@ input[type="email"]{
   margin-left: 5em;
   width: 61%;
 }
-input[type="password"]{
+input[type="password"],  input[type="text"]{
   font-size:  35px;
   background: #f2f2f2;
   font-size: 24px;
   height: 35px;
   margin-left: 5em;
   width: 61%;
+}
+.new-campaign {
+  width: 80% !important;
 }
 ::-webkit-input-placeholder {
   text-align: center;
@@ -338,9 +341,18 @@ input[type="password"]{
 .intro-heading, .intro-lead-in {
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: black;
+   margin: 0 auto;
 }
 .container {
-  margin: 20px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
+#services {
+ margin-top: 150px;
+ height:  430px;
+}
+.this-thing {
+  padding-top: 20px
 }
 
 /*.nav_logo {position: absolute; z-index: 1000}
