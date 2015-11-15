@@ -170,7 +170,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     border-color: white;
     background-color: white;
 }
