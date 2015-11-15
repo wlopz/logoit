@@ -339,6 +339,9 @@ input[type="password"]{
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: black;
 }
+.container {
+  margin: 20px;
+}
 
 /*.nav_logo {position: absolute; z-index: 1000}
 
