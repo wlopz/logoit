@@ -35,7 +35,7 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: #000000;
 }
 
 a:hover,
@@ -170,6 +170,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
+    padding: 10px 0;
     border-color: transparent;
     background-color: white;
 }
@@ -252,8 +253,8 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: transparent;
+        padding: 0px 0;
+        background-color: white;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
