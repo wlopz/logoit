@@ -234,9 +234,9 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         border: 0;
         background-color: white;
-        -webkit-transition: padding .3s;
+/*        -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
-        transition: padding .3s;
+        transition: padding .3s;*/
     }
 
     .navbar-default .navbar-brand {
