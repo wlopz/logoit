@@ -313,6 +313,7 @@ input[type="password"]{
   margin: 40px 0 0 0;
   padding: 0 0 0 0;
 }
+
 #front-logo {
   background-image: url("https://s3.amazonaws.com/logoit2/splash.jpg");
   background-size: cover;
