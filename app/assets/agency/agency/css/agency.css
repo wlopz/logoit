@@ -253,7 +253,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default.navbar-shrink {
-        padding: 0px 0;
+        /*padding: 0px 0;*/
         background-color: white;
     }
 
