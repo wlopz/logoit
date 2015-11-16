@@ -30,6 +30,12 @@ var ready = function() {
 	}, function(){
 		$(this).closest("div.shake").trigger('stopRumble');
 	});
+	$(".well").jrumble({x: 1,y: 0, rotation: 0 });
+	$(".glyphicon").hover(function(){
+		$(this).closest("div.well").trigger('startRumble');
+	}, function(){
+		$(this).closest("div.well").trigger('stopRumble');
+	});
 	Dropzone.autoDiscover = false;
 
 	// grap our upload form by its id

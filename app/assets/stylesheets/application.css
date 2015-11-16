@@ -357,6 +357,10 @@ input[type="password"],  input[type="text"]{
 .logoitimagefront {
   margin-top: -60px;
 }
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
 /*.nav_logo {position: absolute; z-index: 1000}
 
 .nav_logo_image { background: url('assets/images/Logoit-03.png') }*/
