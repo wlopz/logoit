@@ -321,7 +321,7 @@ input[type="password"],  input[type="text"]{
 }
 
 #front-logo {
-  background-image: url("https://s3.amazonaws.com/logoit2/splash.jpg");
+  background-image: url("https://s3.amazonaws.com/logoit2/splash2.jpg");
   background-size: cover;
 }
 
@@ -354,7 +354,9 @@ input[type="password"],  input[type="text"]{
 .this-thing {
   padding-top: 20px
 }
-
+.logoitimagefront {
+  margin-top: -60px;
+}
 /*.nav_logo {position: absolute; z-index: 1000}
 
 .nav_logo_image { background: url('assets/images/Logoit-03.png') }*/
